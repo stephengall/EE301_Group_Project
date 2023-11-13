@@ -1,0 +1,109 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\title{\textbf{Equations for use in main report}}
+\author{Conal Hughes -- 20365616}
+\date{15/12/2022}
+
+\begin{document}
+\maketitle
+
+
+\section{Equation 1} % Fourier series
+\begin{equation}
+    f(x) = \frac{1}{2} a_0 + \sum^{\infty}_{n=1} a_n cos(nx) + \sum^{\infty}_{n=1} b_n sin(nx)
+\end{equation}
+
+
+
+
+\section{Equation 2} % Fourier series coefficients
+\begin{align}
+    a_0 &= \frac{1}{\pi} \int^{\pi}_{-\pi} f(x) dx\\
+    a_n &= \frac{1}{\pi} \int^{\pi}_{-\pi} f(x)cos(nx) dx\\
+    b_n &= \frac{1}{\pi} \int^{\pi}_{-\pi} f(x)sin(nx) dx
+\end{align}
+
+
+
+
+
+
+\section{Equation 3} % Fourier transform
+\begin{align}
+    \mathcal{F}\{g(t)\} = G(f) &= \int^{\infty}_{\infty}g(t) e^{-j2\pi ft}dt\\
+    \mathcal{F}^{-1}\{G(f)\} = g(t) &= \int^{\infty}_{\infty}G(f) e^{j2\pi ft}dt
+\end{align}
+
+
+
+
+
+\section{Equation 4} % DTFS
+\begin{equation}
+    X[k] = \frac{1}{N} \sum^{N-1}_{n=0} x[n]e^{-jk\Omega_0n},k = 0,1,\ldots, N-1
+\end{equation}
+
+
+
+
+
+
+
+\section{Equation 5} % Inverse DTFS
+\begin{equation}
+    x[n] = \sum^{N-1}_{k=0} X[k]e^{jn\Omega_0k}
+\end{equation}
+
+
+
+
+\section{Equation 6} % DFT
+\begin{equation}
+    S(k) = \sum^{N-1}_{n=0} s[n]e^{-j(\frac{2\pi}{N})kn}
+\end{equation}
+
+
+
+
+
+
+\section{Equation 7} %IDFT
+\begin{equation}
+    s[n] = \frac{1}{N}\sum^{N-1}_{k=0} S(k)e^{j(\frac{2\pi}{N})kn}
+\end{equation}
+
+
+
+
+
+
+\section{Equation 8} %DTFT
+\begin{equation}
+    X(\omega) = \sum^\infty_\infty x[n]e^{-j\omega n}
+\end{equation}
+
+
+
+
+
+
+\section{Equation 9} % IDTFT
+\begin{equation}
+    x[n] = \frac{1}{2\pi} \int^\pi_{-\pi} X(\omega)e^{j\omega n}d\omega
+\end{equation}
+
+
+
+
+
+
+\section{Equation 10} % Butterworth
+\begin{equation}
+    |H(\omega)| = \frac{1}{\sqrt{1 + (\frac{\omega}{\omega_c})^{2N}}}
+\end{equation}
+
+\end{document}
